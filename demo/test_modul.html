@@ -63,7 +63,8 @@
 
 
         var mtlLoader = new THREE.MTLLoader();
-        mtlLoader.load( 'obj/building 11.mtl', mtl);
+        mtlLoader.setPath('/obj/');
+        mtlLoader.load( 'building 11.mtl', mtl);
 
 
         function mtl( material ) {
@@ -71,7 +72,8 @@
             var objLoader = new THREE.OBJLoader() ;
 
             objLoader.setMaterials( material );
-            objLoader.load( 'obj/building 11.obj',obj );
+            objLoader.setPath('/obj/');
+            objLoader.load( 'building 11.obj',obj );
         }
 
         function obj( object3D ) {
